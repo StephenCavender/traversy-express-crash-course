@@ -8,6 +8,10 @@ const app = express();
 // init logger
 // app.use(logger);
 
+// Body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // app.get("/", (req, res) => {
 //   // res.send("hello!");
 //   res.sendFile(path.join(__dirname, "public", "index.html"));
